@@ -20,12 +20,14 @@ export const Header = () => {
             className="object-contain"
           />
         </div>
-        <Link
-          href={isRoot ? "/0" : "/"}
-          className="text-preset-5 tablet:text-preset-6 text-grey-400 uppercase hover:text-black"
-        >
-          {isRoot ? "Start" : "Stop"} slideshow
-        </Link>
+        <nav>
+          <Link
+            href={isRoot ? "/0" : "/"}
+            className="text-preset-5 tablet:text-preset-6 text-grey-400 uppercase hover:text-black"
+          >
+            {isRoot ? "Start" : "Stop"} slideshow
+          </Link>
+        </nav>
       </header>
       <div className="bg-grey-150 desktop:m-5 tablet:my-5 my-3 h-px"></div>
     </>
