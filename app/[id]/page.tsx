@@ -19,7 +19,7 @@ const SlidePage = ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <>
-      <div className="tablet:mb-7 tablet:mx-5 desktop:grid desktop:grid-cols-[848px_476px] desktop:gap-4.5 desktop:justify-center desktop:items-center mx-3 mb-9.75 flex-1">
+      <main className="tablet:mb-7 tablet:mx-5 desktop:grid desktop:grid-cols-[848px_476px] desktop:gap-4.5 desktop:justify-center desktop:items-center mx-3 mb-9.75 flex-1">
         <div className="relative mb-12.25">
           <div className="relative max-w-[475px]">
             <Image
@@ -78,7 +78,7 @@ const SlidePage = ({ params }: { params: Promise<{ id: string }> }) => {
             </Link>
           </div>
         </div>
-      </div>
+      </main>
 
       <Footer item={item} dataLength={data.length} id={id} />
     </>

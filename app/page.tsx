@@ -20,7 +20,7 @@ function HomePage() {
   const columns = useMemo(() => masonry({ items, numCols }), [items, numCols]);
 
   return (
-    <div className="tablet:mx-7 tablet:mb-7 desktop:mx-5 desktop:mb-5 mx-4 mb-4 flex gap-5">
+    <main className="tablet:mx-7 tablet:mb-7 desktop:mx-5 desktop:mb-5 mx-4 mb-4 flex gap-5">
       {columns.map((column, colIndex) => {
         return (
           <div key={colIndex} className="flex flex-1 flex-col gap-5">
@@ -38,7 +38,7 @@ function HomePage() {
           </div>
         );
       })}
-    </div>
+    </main>
   );
 }
 

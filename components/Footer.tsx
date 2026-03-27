@@ -15,7 +15,7 @@ export const Footer = ({ item, dataLength, id }: FooterProps) => {
   const isLastItem = Number(id) === dataLength - 1;
 
   return (
-    <div className="sticky bottom-0 bg-white">
+    <footer className="sticky bottom-0 bg-white">
       <ProgressBar dataLength={dataLength} currentItemIndex={Number(id)} />
       <div className="tablet:px-5 tablet:py-3.25 flex justify-between px-2 py-2">
         <div>
@@ -49,6 +49,6 @@ export const Footer = ({ item, dataLength, id }: FooterProps) => {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
