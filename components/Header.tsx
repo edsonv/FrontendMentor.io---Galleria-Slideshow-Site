@@ -10,7 +10,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="desktop:m-5 desktop:my-5 mx-3 my-3 mb-0 flex items-center justify-between">
+      <header className="desktop:mx-5 desktop:mt-5 mx-3 mt-3 flex items-center justify-between">
         <div className="relative block h-6 w-21.25">
           <Image
             src="/images/shared/logo.svg"
