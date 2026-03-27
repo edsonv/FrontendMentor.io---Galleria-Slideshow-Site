@@ -11,7 +11,7 @@ interface FooterProps {
 
 export const Footer = ({ item, dataLength, id }: FooterProps) => {
   return (
-    <div>
+    <div className="sticky bottom-0 bg-white">
       <ProgressBar dataLength={dataLength} currentItemIndex={Number(id)} />
       <div className="flex justify-between px-2 py-2">
         <div>
@@ -21,10 +21,10 @@ export const Footer = ({ item, dataLength, id }: FooterProps) => {
 
         <div className="flex items-center gap-3">
           <Link href={`/${Number(id) - 1}`}>
-            <PreviousIcon />
+            <PreviousIcon className="h-2 w-2" />
           </Link>
           <Link href={`/${Number(id) + 1}`}>
-            <NextIcon />
+            <NextIcon className="h-2 w-2" />
           </Link>
         </div>
       </div>

@@ -1,6 +1,16 @@
-export const PreviousIcon = () => {
+import { SVGProps } from "react";
+
+export const PreviousIcon = ({
+  className,
+  ...props
+}: SVGProps<SVGSVGElement>) => {
   return (
-    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 26 24"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      {...props}
+    >
       <g stroke="#000" fill="none" fillRule="evenodd">
         <path
           d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z"
@@ -11,3 +21,4 @@ export const PreviousIcon = () => {
     </svg>
   );
 };
+
