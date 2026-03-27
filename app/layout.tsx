@@ -24,9 +24,10 @@ export default function RootLayout({
       lang="en"
       className={`${libreBaskerville.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col justify-between">
         <Header />
         {children}
+        <div id="modal-root"></div>
       </body>
     </html>
   );
