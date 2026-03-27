@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-serif: var(--font-libre-baskerville-serif);
+  --font-serif:
+    var(--font-libre-baskerville-serif), "Times New Roman", Georgia, Garamond,
+    serif;
 }
 
 @theme {
@@ -9,14 +11,14 @@
   --breakpoint-mobile: 375px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1440px;
-  --color-grey-100: "#F3F3F3";
-  --color-grey-150: "#E5E5E5";
-  --color-grey-200: "#D8D8D8";
-  --color-grey-400: "#7D7D7D";
+  --color-grey-100: #f3f3f3;
+  --color-grey-150: #e5e5e5;
+  --color-grey-200: #d8d8d8;
+  --color-grey-400: #7d7d7d;
 }
 
 body {
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-serif);
   font-size: 16px;
 }
 
@@ -32,13 +34,15 @@ body {
 }
 
 @utility text-preset-2 {
-  font-size: clamp(1.5rem, calc(0.796rem + 3.005vw), 3.5rem);
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.15;
+}
+
+@utility text-preset-2-mobile {
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.25;
-
-  @media screen and (min-width: var(--breakpoint-desktop)) {
-    line-height: 1.15;
-  }
 }
 
 @utility text-preset-3 {
