@@ -28,7 +28,7 @@ function HomePage() {
               const originalIndex = items.indexOf(item);
 
               return (
-                <li key={item.name}>
+                <li key={item.name + originalIndex}>
                   <GalleryCard item={item} originalIndex={originalIndex} />
                 </li>
               );
