@@ -10,7 +10,6 @@ export const Modal = ({
 }: {
   image: { src: string; width: number; height: number };
 }) => {
-  const modalRoot = document.getElementById("modal-root");
   const [showModal, setShowModal] = useState(false);
 
   const handleViewImage = () => {
@@ -30,18 +29,20 @@ export const Modal = ({
     };
   }, [showModal]);
 
-  if (!modalRoot) return null;
+  const modalRoot =
+    typeof document !== "undefined" ? document.getElementById("modal-root") : null;
 
   return (
     <>
       <button
-        className="text-prest-7 tablet:bottom-2 tablet:top-auto absolute top-2 left-2 flex cursor-pointer items-center gap-2 bg-black px-2 py-1.75 text-[10px] text-white uppercase hover:bg-white/25"
+        className="text-preset-7 tablet:bottom-2 tablet:top-auto absolute top-2 left-2 flex cursor-pointer items-center gap-2 bg-black px-2 py-1.75 text-[10px] text-white uppercase hover:bg-white/25"
         onClick={handleViewImage}
       >
         <ViewImageIcon className="h-1.5 w-1.5" />
         View Image
       </button>
-      {showModal &&
+      {modalRoot &&
+        showModal &&
         createPortal(
           <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/85">
             <div

@@ -15,18 +15,22 @@ export const Header = () => {
         <div className="relative h-6 w-21.25">
           <Image
             src="/images/shared/logo.svg"
-            alt="Logo"
+            alt="Galleria. - Company Logo"
             fill
             className="object-contain"
           />
         </div>
         <nav>
-          <Link
-            href={isRoot ? "/0" : "/"}
-            className="text-preset-5 tablet:text-preset-6 text-grey-400 uppercase hover:text-black"
-          >
-            {isRoot ? "Start" : "Stop"} slideshow
-          </Link>
+          <ul>
+            <li>
+              <Link
+                href={isRoot ? "/0" : "/"}
+                className="text-preset-5 tablet:text-preset-6 text-grey-400 uppercase hover:text-black"
+              >
+                {isRoot ? "Start" : "Stop"} slideshow
+              </Link>
+            </li>
+          </ul>
         </nav>
       </header>
       <div
