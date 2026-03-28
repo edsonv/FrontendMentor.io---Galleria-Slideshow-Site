@@ -23,31 +23,38 @@ export const Footer = ({ item, dataLength, id }: FooterProps) => {
           <div className="text-preset-4 text-black/75">{item.artist.name}</div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <Link
-            href={isFirstItem ? "#" : `/${Number(id) - 1}`}
-            aria-disabled={isFirstItem}
-            className={cn(
-              "hover:opacity-15",
-              isFirstItem &&
-                "pointer-events-none cursor-not-allowed opacity-15",
-            )}
-            tabIndex={isFirstItem ? -1 : undefined}
-          >
-            <PreviousIcon className="tablet:h-3 tablet:w-3 h-2 w-2" />
-          </Link>
-          <Link
-            href={isLastItem ? "#" : `/${Number(id) + 1}`}
-            aria-disabled={isLastItem}
-            className={cn(
-              "hover:opacity-15",
-              isLastItem && "pointer-events-none cursor-not-allowed opacity-15",
-            )}
-            tabIndex={isLastItem ? -1 : undefined}
-          >
-            <NextIcon className="tablet:h-3 tablet:w-3 h-2 w-2" />
-          </Link>
-        </div>
+        <nav>
+          <ul className="flex items-center gap-3">
+            <li>
+              <Link
+                href={isFirstItem ? "#" : `/${Number(id) - 1}`}
+                aria-disabled={isFirstItem}
+                className={cn(
+                  "hover:opacity-15",
+                  isFirstItem &&
+                    "pointer-events-none cursor-not-allowed opacity-15",
+                )}
+                tabIndex={isFirstItem ? -1 : undefined}
+              >
+                <PreviousIcon className="tablet:h-3 tablet:w-3 h-2 w-2" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={isLastItem ? "#" : `/${Number(id) + 1}`}
+                aria-disabled={isLastItem}
+                className={cn(
+                  "hover:opacity-15",
+                  isLastItem &&
+                    "pointer-events-none cursor-not-allowed opacity-15",
+                )}
+                tabIndex={isLastItem ? -1 : undefined}
+              >
+                <NextIcon className="tablet:h-3 tablet:w-3 h-2 w-2" />
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );
