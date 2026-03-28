@@ -31,8 +31,8 @@ export const GalleryCard = ({
             {item.artist.name}
           </div>
         </figcaption>
-        <div className="absolute top-0 left-0 z-10 h-full w-full bg-linear-[to_top,rgba(0,0,0,.84),rgba(0,0,0,0)]"></div>
       </figure>
+      <div className="absolute top-0 left-0 z-10 h-full w-full bg-linear-[to_top,rgba(0,0,0,.84),rgba(0,0,0,0)]"></div>
     </Link>
   );
 };
