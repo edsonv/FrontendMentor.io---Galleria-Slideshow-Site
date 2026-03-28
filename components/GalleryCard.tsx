@@ -24,7 +24,7 @@ export const GalleryCard = ({
           />
         </picture>
         <figcaption className="absolute bottom-0 left-0 z-20 p-4">
-          <h2 className="text-preset-2-mobile text-white">{item.name}</h2>
+          <h3 className="text-preset-2-mobile text-white">{item.name}</h3>
           <p className="text-preset-5 mt-1 text-white">{item.artist.name}</p>
         </figcaption>
       </figure>
