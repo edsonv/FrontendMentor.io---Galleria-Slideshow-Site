@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import data from "@/lib/data.json";
 import Link from "next/link";
 
-const SlidePage = async ({ params }: { params: Promise<{ id: string }> }) => {
+const SlidePage = async ({ params }: { params: { id: string } }) => {
   const { id } = await params;
   const item = data[Number(id)] as Painting;
 
