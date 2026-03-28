@@ -21,7 +21,6 @@ export const GalleryCard = ({
             width={item.images.thumbnail.width}
             height={item.images.thumbnail.height}
             className="h-auto w-full object-contain"
-            priority
           />
         </picture>
         <figcaption className="absolute bottom-0 left-0 z-20 p-4">

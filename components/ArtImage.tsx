@@ -39,7 +39,6 @@ export const ArtImage = ({
         width={image.width}
         height={image.height}
         className="object-contain"
-        priority
       />
       <Modal image={galleryImage} />
     </div>

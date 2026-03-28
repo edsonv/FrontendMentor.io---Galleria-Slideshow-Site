@@ -17,7 +17,6 @@ export const Header = () => {
             src="/images/shared/logo.svg"
             alt="Logo"
             fill
-            priority
             className="object-contain"
           />
         </div>
