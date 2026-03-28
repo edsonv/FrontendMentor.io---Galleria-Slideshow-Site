@@ -25,7 +25,7 @@ export const Footer = ({ item, dataLength, id }: FooterProps) => {
 
         <div className="flex items-center gap-3">
           <Link
-            href={`/${Number(id) - 1}`}
+            href={isFirstItem ? "#" : `/${Number(id) - 1}`}
             aria-disabled={isFirstItem}
             className={cn(
               "hover:opacity-15",
@@ -37,7 +37,7 @@ export const Footer = ({ item, dataLength, id }: FooterProps) => {
             <PreviousIcon className="tablet:h-3 tablet:w-3 h-2 w-2" />
           </Link>
           <Link
-            href={`/${Number(id) + 1}`}
+            href={isLastItem ? "#" : `/${Number(id) + 1}`}
             aria-disabled={isLastItem}
             className={cn(
               "hover:opacity-15",
