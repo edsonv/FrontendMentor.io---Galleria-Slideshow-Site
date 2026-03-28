@@ -10,6 +10,7 @@ export const Modal = ({
 }: {
   image: { src: string; width: number; height: number };
 }) => {
+  const modalRoot = document.getElementById("modal-root");
   const [showModal, setShowModal] = useState(false);
 
   const handleViewImage = () => {
@@ -29,6 +30,8 @@ export const Modal = ({
     };
   }, [showModal]);
 
+  if (!modalRoot) return null;
+
   return (
     <>
       <button
@@ -38,7 +41,6 @@ export const Modal = ({
         <ViewImageIcon className="h-1.5 w-1.5" />
         View Image
       </button>
-
       {showModal &&
         createPortal(
           <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/85">
@@ -59,7 +61,7 @@ export const Modal = ({
               />
             </div>
           </div>,
-          document.getElementById("modal-root")!,
+          modalRoot,
         )}
     </>
   );
