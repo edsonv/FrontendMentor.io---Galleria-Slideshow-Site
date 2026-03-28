@@ -25,10 +25,8 @@ export const GalleryCard = ({
           />
         </picture>
         <figcaption className="absolute bottom-0 left-0 z-20 p-4">
-          <div className="text-preset-2-mobile text-white">{item.name}</div>
-          <div className="text-preset-5 mt-1 text-white">
-            {item.artist.name}
-          </div>
+          <h2 className="text-preset-2-mobile text-white">{item.name}</h2>
+          <p className="text-preset-5 mt-1 text-white">{item.artist.name}</p>
         </figcaption>
       </figure>
       <div className="absolute top-0 left-0 z-10 h-full w-full bg-linear-[to_top,rgba(0,0,0,.84),rgba(0,0,0,0)]"></div>
