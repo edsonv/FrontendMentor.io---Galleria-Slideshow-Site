@@ -30,7 +30,11 @@ export const Header = () => {
           </Link>
         </nav>
       </header>
-      <div className="bg-grey-150 desktop:m-5 tablet:my-5 my-3 h-px"></div>
+      <div
+        className="bg-grey-150 desktop:m-5 tablet:my-5 my-3 h-px"
+        role="separator"
+        aria-hidden="true"
+      />
     </>
   );
 };
