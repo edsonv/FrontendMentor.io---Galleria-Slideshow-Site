@@ -11,6 +11,7 @@ export const Header = () => {
   return (
     <>
       <header className="desktop:mx-5 desktop:mt-5 mx-3 mt-3 flex items-center justify-between">
+        <h1 className="sr-only">Galleria.</h1>
         <div className="relative h-6 w-21.25">
           <Image
             src="/images/shared/logo.svg"
