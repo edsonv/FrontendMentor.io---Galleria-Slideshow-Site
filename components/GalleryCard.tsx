@@ -11,10 +11,9 @@ export const GalleryCard = ({
   return (
     <Link
       href={`/${originalIndex}`}
-      key={item.name}
       className="card relative hover:mask-[linear-gradient(to_top,rgba(0,0,0,0.9)_16%,rgba(0,0,0,.5)_100%)] focus:mask-[linear-gradient(to_top,rgba(0,0,0,0.9)_16%,rgba(0,0,0,.5)_100%)]"
     >
-      <figure>
+      <figure className="relative">
         <picture className="block">
           <Image
             src={item.images.thumbnail.src}

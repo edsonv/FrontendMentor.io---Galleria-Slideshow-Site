@@ -23,19 +23,17 @@ function HomePage() {
     <main className="tablet:mx-7 tablet:mb-7 desktop:mx-5 desktop:mb-5 mx-4 mb-4 flex gap-5">
       {columns.map((column, colIndex) => {
         return (
-          <div key={colIndex} className="flex flex-1 flex-col gap-5">
+          <ul key={colIndex} className="flex flex-1 flex-col gap-5">
             {column.map((item) => {
               const originalIndex = items.indexOf(item);
 
               return (
-                <GalleryCard
-                  item={item}
-                  originalIndex={originalIndex}
-                  key={item.name}
-                />
+                <li key={item.name}>
+                  <GalleryCard item={item} originalIndex={originalIndex} />
+                </li>
               );
             })}
-          </div>
+          </ul>
         );
       })}
     </main>
